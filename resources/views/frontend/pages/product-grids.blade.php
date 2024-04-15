@@ -30,7 +30,11 @@
                         <div class="shop-sidebar">
                                 <!-- Single Widget -->
                                 <div class="single-widget category">
+<<<<<<< HEAD
                                     <h3 class="title">Categories</h3>
+=======
+                                    <h3 class="title">Genres</h3>
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                     <ul class="categor-list">
 										@php
 											// $category = new Category();
@@ -112,7 +116,11 @@
                                 <!--/ End Single Widget -->
                                 <!-- Single Widget -->
                                 <div class="single-widget category">
+<<<<<<< HEAD
                                     <h3 class="title">Brands</h3>
+=======
+                                    <h3 class="title">Publications</h3>
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                     <ul class="categor-list">
                                         @php
                                             $brands=DB::table('brands')->orderBy('title','ASC')->where('status','active')->get();
@@ -190,9 +198,14 @@
                                             <div class="product-content">
                                                 <h3><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                                                 @php
+<<<<<<< HEAD
                                                 $after_discount = $product->price - ($product->price * ($product->discount / 100));
                                             @endphp
                                             
+=======
+                                                    $after_discount=($product->price-($product->price*$product->discount)/100);
+                                                @endphp
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                                 <span>Rs.{{number_format($after_discount,2)}}</span>
                                                 <del style="padding-left:4%;">Rs.{{number_format($product->price,2)}}</del>
                                             </div>
@@ -200,7 +213,11 @@
                                     </div>
                                 @endforeach
                             @else
+<<<<<<< HEAD
                                     <h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
+=======
+                                    <h4 class="text-warning" style="margin:100px auto;">There are no books.</h4>
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                             @endif
 
 

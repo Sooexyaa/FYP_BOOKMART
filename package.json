@@ -1,5 +1,6 @@
 {
     "private": true,
+<<<<<<< HEAD
     "scripts": {
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -26,5 +27,16 @@
     "dependencies": {
         "laravel-echo": "^1.8.0",
         "pusher-js": "^6.0.3"
+=======
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.6.4",
+        "laravel-vite-plugin": "^1.0.0",
+        "vite": "^5.0.0"
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     }
 }

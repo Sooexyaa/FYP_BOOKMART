@@ -28,38 +28,71 @@ return [
     | sending an e-mail. You will specify which one you are using for your
     | mailers below. You are free to add additional mailers as required.
     |
+<<<<<<< HEAD
     | Supported: "smtp", "sendmail", "mailgun", "ses",
     |            "postmark", "log", "array"
+=======
+    | Supported: "smtp", "sendmail", "mailgun", "ses", "ses-v2",
+    |            "postmark", "log", "array", "failover", "roundrobin"
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     |
     */
 
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
+<<<<<<< HEAD
+=======
+            'url' => env('MAIL_URL'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
             'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
+<<<<<<< HEAD
             'auth_mode' => null,
+=======
+            'local_domain' => env('MAIL_EHLO_DOMAIN'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'ses' => [
             'transport' => 'ses',
         ],
 
+<<<<<<< HEAD
         'mailgun' => [
             'transport' => 'mailgun',
         ],
 
         'postmark' => [
             'transport' => 'postmark',
+=======
+        'postmark' => [
+            'transport' => 'postmark',
+            // 'message_stream_id' => null,
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+        ],
+
+        'mailgun' => [
+            'transport' => 'mailgun',
+            // 'client' => [
+            //     'timeout' => 5,
+            // ],
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'sendmail' => [
             'transport' => 'sendmail',
+<<<<<<< HEAD
             'path' => '/usr/sbin/sendmail -bs',
+=======
+            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'log' => [
@@ -70,6 +103,25 @@ return [
         'array' => [
             'transport' => 'array',
         ],
+<<<<<<< HEAD
+=======
+
+        'failover' => [
+            'transport' => 'failover',
+            'mailers' => [
+                'smtp',
+                'log',
+            ],
+        ],
+
+        'roundrobin' => [
+            'transport' => 'roundrobin',
+            'mailers' => [
+                'ses',
+                'postmark',
+            ],
+        ],
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     ],
 
     /*

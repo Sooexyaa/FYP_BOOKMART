@@ -1,6 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
+<<<<<<< HEAD
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
@@ -18,6 +19,17 @@
         "spatie/laravel-newsletter": "^5.1",
         "srmklive/paypal": "^3.0",
         "unisharp/laravel-filemanager": "^2.6"
+=======
+    "description": "The skeleton application for the Laravel framework.",
+    "keywords": ["laravel", "framework"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^10.10",
+        "laravel/sanctum": "^3.3",
+        "laravel/tinker": "^2.8"
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -25,24 +37,36 @@
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
+<<<<<<< HEAD
         "phpunit/phpunit": "^10.0",
+=======
+        "phpunit/phpunit": "^10.1",
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
+<<<<<<< HEAD
             "Database\\Seeders\\": "database/seeders/",
             "Touhidurabir\\Filterable\\": "packages/laravel-filterable/src/"
+=======
+            "Database\\Seeders\\": "database/seeders/"
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
+<<<<<<< HEAD
         },
         "files":[
             "app/Http/Helpers.php"
         ]
+=======
+        }
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     },
     "scripts": {
         "post-autoload-dump": [
@@ -60,9 +84,12 @@
         ]
     },
     "extra": {
+<<<<<<< HEAD
         "branch-alias": {
             "dev-master": "10.x-dev"
         },
+=======
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         "laravel": {
             "dont-discover": []
         }
@@ -72,7 +99,12 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
+<<<<<<< HEAD
             "pestphp/pest-plugin": true
+=======
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         }
     },
     "minimum-stability": "stable",

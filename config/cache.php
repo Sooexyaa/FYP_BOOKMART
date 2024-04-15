@@ -13,9 +13,12 @@ return [
     | using this caching library. This connection is used when another is
     | not explicitly specified when executing a given caching function.
     |
+<<<<<<< HEAD
     | Supported: "apc", "array", "database", "file",
     |            "memcached", "redis", "dynamodb"
     |
+=======
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     */
 
     'default' => env('CACHE_DRIVER', 'file'),
@@ -29,6 +32,12 @@ return [
     | well as their drivers. You may even define multiple stores for the
     | same cache driver to group types of items stored in your caches.
     |
+<<<<<<< HEAD
+=======
+    | Supported drivers: "apc", "array", "database", "file",
+    |         "memcached", "redis", "dynamodb", "octane", "null"
+    |
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     */
 
     'stores' => [
@@ -46,11 +55,19 @@ return [
             'driver' => 'database',
             'table' => 'cache',
             'connection' => null,
+<<<<<<< HEAD
+=======
+            'lock_connection' => null,
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'file' => [
             'driver' => 'file',
             'path' => storage_path('framework/cache/data'),
+<<<<<<< HEAD
+=======
+            'lock_path' => storage_path('framework/cache/data'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'memcached' => [
@@ -75,6 +92,10 @@ return [
         'redis' => [
             'driver' => 'redis',
             'connection' => 'cache',
+<<<<<<< HEAD
+=======
+            'lock_connection' => 'default',
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'dynamodb' => [
@@ -86,6 +107,13 @@ return [
             'endpoint' => env('DYNAMODB_ENDPOINT'),
         ],
 
+<<<<<<< HEAD
+=======
+        'octane' => [
+            'driver' => 'octane',
+        ],
+
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     ],
 
     /*
@@ -93,6 +121,7 @@ return [
     | Cache Key Prefix
     |--------------------------------------------------------------------------
     |
+<<<<<<< HEAD
     | When utilizing a RAM based store such as APC or Memcached, there might
     | be other applications utilizing the same cache. So, we'll specify a
     | value to get prefixed to all our keys so we can avoid collisions.
@@ -100,5 +129,14 @@ return [
     */
 
     'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache'),
+=======
+    | When utilizing the APC, database, memcached, Redis, or DynamoDB cache
+    | stores there might be other applications using the same cache. For
+    | that reason, you may prefix every cache key to avoid collisions.
+    |
+    */
+
+    'prefix' => env('CACHE_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_cache_'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
 ];

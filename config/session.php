@@ -72,7 +72,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'connection' => env('SESSION_CONNECTION', null),
+=======
+    'connection' => env('SESSION_CONNECTION'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
     /*
     |--------------------------------------------------------------------------
@@ -100,7 +104,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'store' => env('SESSION_STORE', null),
+=======
+    'store' => env('SESSION_STORE'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +163,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'domain' => env('SESSION_DOMAIN', null),
+=======
+    'domain' => env('SESSION_DOMAIN'),
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
     /*
     |--------------------------------------------------------------------------
@@ -164,7 +176,11 @@ return [
     |
     | By setting this option to true, session cookies will only be sent back
     | to the server if the browser has a HTTPS connection. This will keep
+<<<<<<< HEAD
     | the cookie from being sent to you if it can not be done securely.
+=======
+    | the cookie from being sent to you when it can't be done securely.
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     |
     */
 
@@ -198,4 +214,20 @@ return [
 
     'same_site' => 'lax',
 
+<<<<<<< HEAD
+=======
+    /*
+    |--------------------------------------------------------------------------
+    | Partitioned Cookies
+    |--------------------------------------------------------------------------
+    |
+    | Setting this value to true will tie the cookie to the top-level site for
+    | a cross-site context. Partitioned cookies are accepted by the browser
+    | when flagged "secure" and the Same-Site attribute is set to "none".
+    |
+    */
+
+    'partitioned' => false,
+
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 ];

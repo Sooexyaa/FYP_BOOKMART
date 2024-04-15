@@ -81,11 +81,17 @@
 													</ul>
 													<a href="#" class="total-review">({{$product_detail['getReview']->count()}}) Review</a>
                                                 </div>
+<<<<<<< HEAD
 												@php 
                                                     $after_discount = $product_detail->price - (($product_detail->price * $product_detail->discount) / 100);
                                                 @endphp
 
                                                 
+=======
+                                                @php 
+                                                    $after_discount=($product_detail->price-(($product_detail->price*$product_detail->discount)/100));
+                                                @endphp
+>>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 												<p class="price"><span class="discount">Rs.{{number_format($after_discount,2)}}</span><s>Rs.{{number_format($product_detail->price,2)}}</s> </p>
 												<p class="description">{!!($product_detail->summary)!!}</p>
 											</div>
