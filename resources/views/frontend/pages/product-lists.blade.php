@@ -30,11 +30,7 @@
 							<div class="shop-sidebar">
                                 <!-- Single Widget -->
                                 <div class="single-widget category">
-<<<<<<< HEAD
                                     <h3 class="title">Categories</h3>
-=======
-                                    <h3 class="title">Genres</h3>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                     <ul class="categor-list">
 										@php
 											// $category = new Category();
@@ -121,14 +117,9 @@
                                             <div class="content">
                                                 <h5><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h5>
                                                 @php
-<<<<<<< HEAD
     $org = $product->price - ($product->price * ($product->discount / 100));
 @endphp
 
-=======
-                                                    $org=($product->price-($product->price*$product->discount)/100);
-                                                @endphp
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                                 <p class="price"><del class="text-muted">Rs.{{number_format($product->price,2)}}</del>   Rs.{{number_format($org,2)}}  </p>                                                
                                             </div>
                                         </div>
@@ -173,13 +164,8 @@
 													<option value="">Default</option>
 													<option value="title" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='title') selected @endif>Name</option>
 													<option value="price" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='price') selected @endif>Price</option>
-<<<<<<< HEAD
 													<option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Category</option>
 													<option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Brand</option>
-=======
-													<option value="category" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='category') selected @endif>Genre</option>
-													<option value="brand" @if(!empty($_GET['sortBy']) && $_GET['sortBy']=='brand') selected @endif>Publication</option>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 												</select>
 											</div>
 										</div>
@@ -242,11 +228,7 @@
 										<!-- End Single List -->
 									@endforeach
 								@else
-<<<<<<< HEAD
 									<h4 class="text-warning" style="margin:100px auto;">There are no products.</h4>
-=======
-									<h4 class="text-warning" style="margin:100px auto;">There are no Books.</h4>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 								@endif
 							</div>
 							 <div class="row">

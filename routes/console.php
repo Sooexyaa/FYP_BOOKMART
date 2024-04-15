@@ -16,8 +16,4 @@ use Illuminate\Support\Facades\Artisan;
 
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
-<<<<<<< HEAD
 })->describe('Display an inspiring quote');
-=======
-})->purpose('Display an inspiring quote');
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc

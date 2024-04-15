@@ -13,7 +13,6 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'default' => env('FILESYSTEM_DRIVER', 'local'),
 
     /*
@@ -28,9 +27,6 @@ return [
     */
 
     'cloud' => env('FILESYSTEM_CLOUD', 's3'),
-=======
-    'default' => env('FILESYSTEM_DISK', 'local'),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
     /*
     |--------------------------------------------------------------------------
@@ -39,11 +35,7 @@ return [
     |
     | Here you may configure as many filesystem "disks" as you wish, and you
     | may even configure multiple disks of the same driver. Defaults have
-<<<<<<< HEAD
     | been setup for each driver as an example of the required options.
-=======
-    | been set up for each driver as an example of the required values.
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     |
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
@@ -54,10 +46,6 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
-<<<<<<< HEAD
-=======
-            'throw' => false,
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         'public' => [
@@ -65,10 +53,6 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
-<<<<<<< HEAD
-=======
-            'throw' => false,
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         's3' => [
@@ -79,11 +63,6 @@ return [
             'bucket' => env('AWS_BUCKET'),
             'url' => env('AWS_URL'),
             'endpoint' => env('AWS_ENDPOINT'),
-<<<<<<< HEAD
-=======
-            'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
-            'throw' => false,
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
     ],

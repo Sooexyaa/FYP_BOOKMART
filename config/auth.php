@@ -31,11 +31,7 @@ return [
     | users are actually retrieved out of your database or other storage
     | mechanisms used by this application to persist your user's data.
     |
-<<<<<<< HEAD
     | Supported: "session", "token"
-=======
-    | Supported: "session"
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     |
     */
 
@@ -44,15 +40,12 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-<<<<<<< HEAD
 
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
             'hash' => false,
         ],
-=======
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     ],
 
     /*
@@ -75,11 +68,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-<<<<<<< HEAD
             'model' => App\User::class,
-=======
-            'model' => App\Models\User::class,
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
         // 'users' => [
@@ -97,31 +86,16 @@ return [
     | than one user table or model in the application and you want to have
     | separate password reset settings based on the specific user types.
     |
-<<<<<<< HEAD
     | The expire time is the number of minutes that the reset token should be
     | considered valid. This security feature keeps tokens short-lived so
     | they have less time to be guessed. You may change this as needed.
     |
-=======
-    | The expiry time is the number of minutes that each reset token will be
-    | considered valid. This security feature keeps tokens short-lived so
-    | they have less time to be guessed. You may change this as needed.
-    |
-    | The throttle setting is the number of seconds a user must wait before
-    | generating more password reset tokens. This prevents the user from
-    | quickly generating a very large amount of password reset tokens.
-    |
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     */
 
     'passwords' => [
         'users' => [
             'provider' => 'users',
-<<<<<<< HEAD
             'table' => 'password_resets',
-=======
-            'table' => 'password_reset_tokens',
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
             'expire' => 60,
             'throttle' => 60,
         ],

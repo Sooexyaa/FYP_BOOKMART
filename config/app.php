@@ -1,11 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-=======
-use Illuminate\Support\Facades\Facade;
-use Illuminate\Support\ServiceProvider;
-
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 return [
 
     /*
@@ -60,11 +54,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-<<<<<<< HEAD
     'asset_url' => env('ASSET_URL', null),
-=======
-    'asset_url' => env('ASSET_URL'),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
     /*
     |--------------------------------------------------------------------------
@@ -135,27 +125,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-<<<<<<< HEAD
-=======
-    | Maintenance Mode Driver
-    |--------------------------------------------------------------------------
-    |
-    | These configuration options determine the driver used to determine and
-    | manage Laravel's "maintenance mode" status. The "cache" driver will
-    | allow maintenance mode to be controlled across multiple machines.
-    |
-    | Supported drivers: "file", "cache"
-    |
-    */
-
-    'maintenance' => [
-        'driver' => 'file',
-        // 'store' => 'redis',
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -165,7 +134,6 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'providers' => [
 
         /*
@@ -200,9 +168,6 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Srmklive\PayPal\Providers\PayPalServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-=======
-    'providers' => ServiceProvider::defaultProviders()->merge([
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         /*
          * Package Service Providers...
          */
@@ -212,18 +177,11 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-<<<<<<< HEAD
         App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],
-=======
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-    ])->toArray(),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
     /*
     |--------------------------------------------------------------------------
@@ -236,7 +194,6 @@ return [
     |
     */
 
-<<<<<<< HEAD
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,
@@ -282,10 +239,5 @@ return [
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
-=======
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
-    ])->toArray(),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
 ];

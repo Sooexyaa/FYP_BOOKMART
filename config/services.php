@@ -18,10 +18,6 @@ return [
         'domain' => env('MAILGUN_DOMAIN'),
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
-<<<<<<< HEAD
-=======
-        'scheme' => 'https',
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
     ],
 
     'postmark' => [
@@ -33,7 +29,6 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-<<<<<<< HEAD
     'github' => [
         'client_id' => 'YOUR_GITHUB_API', //Github API
         'client_secret' => 'YOUR_GITHUB_SECRET', //Github Secret
@@ -49,7 +44,5 @@ return [
         'client_secret' => 'YOUR_FACEBOK_SECRET', //Facebook Secret
         'redirect' => 'http://localhost:8000/login/facebook/callback',
      ],
-=======
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
 
 ];

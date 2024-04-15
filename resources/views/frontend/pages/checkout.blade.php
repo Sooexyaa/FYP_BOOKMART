@@ -361,11 +361,7 @@
                                     <h2>CART  TOTALS</h2>
                                     <div class="content">
                                         <ul>
-<<<<<<< HEAD
 										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>Rs.{{number_format(Helper::totalCartPrice(),2)}}</span></li>
-=======
-										    <li class="order_subtotal" data-price="{{Helper::totalCartPrice()}}">Cart Subtotal<span>${{number_format(Helper::totalCartPrice(),2)}}</span></li>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                             <li class="shipping">
                                                 Delivery Cost
                                                 @if(count(Helper::shipping())>0 && Helper::cartCount()>0)
@@ -381,11 +377,7 @@
                                             </li>
                                             
                                             @if(session('coupon'))
-<<<<<<< HEAD
                                             <li class="coupon_price" data-price="{{session('coupon')['value']}}">You Save<span>${{number_format(session('coupon')['value'],2)}}</span></li>
-=======
-                                            <li class="coupon_price" data-price="{{session('coupon')['value']}}">You Save<span>Rs.{{number_format(session('coupon')['value'],2)}}</span></li>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                             @endif
                                             @php
                                                 $total_amount=Helper::totalCartPrice();
@@ -412,39 +404,12 @@
                                                 <input name="payment_method"  type="radio" value="cod"> <label> Cash On Delivery</label><br>
                                                 <input name="payment_method"  type="radio" value="paypal"> <label> Esewa</label> 
                                             </form-group>
-<<<<<<< HEAD
-=======
-                                            <form action="https://rc-epay.esewa.com.np/api/epay/main/v2/form" method="POST">
-                                                <input type="text" id="amount" name="amount" value="100" required>
-                                                <input type="text" id="tax_amount" name="tax_amount" value ="10" required>
-                                                <input type="text" id="total_amount" name="total_amount" value="110" required>
-                                                <input type="text" id="transaction_uuid" name="transaction_uuid"required>
-                                                <input type="text" id="product_code" name="product_code" value ="EPAYTEST" required>
-                                                <input type="text" id="product_service_charge" name="product_service_charge" value="0" required>
-                                                <input type="text" id="product_delivery_charge" name="product_delivery_charge" value="0" required>
-                                                <input type="text" id="success_url" name="success_url" value="https://esewa.test/payment-verify?q=su" required>
-                                                <input type="text" id="failure_url" name="failure_url" value="https://esewa.test/payment-verify?q=fu" required>
-                                                <input type="text" id="signed_field_names" name="signed_field_names" value="total_amount,transaction_uuid,product_code" required>
-                                                <input type="text" id="signature" name="signature" " required>
-                                                <input value="Submit" type="submit">
-                                                </form>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                             
                                         </div>
                                     </div>
                                 </div>
                                 <!--/ End Order Widget -->
-<<<<<<< HEAD
                          
-=======
-                                <!-- Payment Method Widget -->
-                                <div class="single-widget payement">
-                                    <div class="content">
-                                        <img src="{{('backend/img/payment-method.png')}}" alt="#">
-                                    </div>
-                                </div>
-                                <!--/ End Payment Method Widget -->
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                                 <!-- Button Widget -->
                                 <div class="single-widget get-button">
                                     <div class="content">
@@ -488,11 +453,7 @@
                     <!-- Start Single Service -->
                     <div class="single-service">
                         <i class="ti-lock"></i>
-<<<<<<< HEAD
                         <h4>Sucure Payment</h4>
-=======
-                        <h4>Suecure Payment</h4>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                         <p>100% secure payment</p>
                     </div>
                     <!-- End Single Service -->
@@ -501,11 +462,7 @@
                     <!-- Start Single Service -->
                     <div class="single-service">
                         <i class="ti-tag"></i>
-<<<<<<< HEAD
                         <h4>Best Books</h4>
-=======
-                        <h4>Authentic Books</h4>
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
                         <p>Guaranteed price</p>
                     </div>
                     <!-- End Single Service -->

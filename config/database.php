@@ -74,11 +74,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-<<<<<<< HEAD
             'schema' => 'public',
-=======
-            'search_path' => 'public',
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
             'sslmode' => 'prefer',
         ],
 
@@ -93,11 +89,6 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-<<<<<<< HEAD
-=======
-            // 'encrypt' => env('DB_ENCRYPT', 'yes'),
-            // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
         ],
 
     ],
@@ -138,12 +129,7 @@ return [
         'default' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
-<<<<<<< HEAD
             'password' => env('REDIS_PASSWORD', null),
-=======
-            'username' => env('REDIS_USERNAME'),
-            'password' => env('REDIS_PASSWORD'),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_DB', '0'),
         ],
@@ -151,12 +137,7 @@ return [
         'cache' => [
             'url' => env('REDIS_URL'),
             'host' => env('REDIS_HOST', '127.0.0.1'),
-<<<<<<< HEAD
             'password' => env('REDIS_PASSWORD', null),
-=======
-            'username' => env('REDIS_USERNAME'),
-            'password' => env('REDIS_PASSWORD'),
->>>>>>> 31f69df9cad6e8a7c11e79d2c8b6f0936703fabc
             'port' => env('REDIS_PORT', '6379'),
             'database' => env('REDIS_CACHE_DB', '1'),
         ],
