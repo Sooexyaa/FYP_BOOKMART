@@ -98,11 +98,11 @@
         </div>
     </li>
 
-    {{-- Shipping --}}
-    {{-- <li class="nav-item">
+    {{-- Delivery --}}
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#shippingCollapse" aria-expanded="true" aria-controls="shippingCollapse">
           <i class="fas fa-truck"></i>
-          <span>Shipping</span>
+          <span>Delivery</span>
         </a>
         <div id="shippingCollapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -111,22 +111,22 @@
             <a class="collapse-item" href="{{route('shipping.create')}}">Add Delivery</a>
           </div>
         </div>
-    </li> --}}
+    </li>
 
-    {{-- <!--Orders -->
+    <!--Orders -->
     <li class="nav-item">
         <a class="nav-link" href="{{route('order.index')}}">
             <i class="fas fa-hammer fa-chart-area"></i>
             <span>Orders</span>
         </a>
-    </li> --}}
+    </li>
 
-    {{-- <!-- Reviews -->
+    <!-- Reviews -->
     <li class="nav-item">
         <a class="nav-link" href="{{route('review.index')}}">
             <i class="fas fa-comments"></i>
             <span>Reviews</span></a>
-    </li> --}}
+    </li>
     
 
     <!-- Divider -->
@@ -152,7 +152,7 @@
       </div>
     </li>
 
-     {{-- <!-- Category -->
+      <!-- Category -->
      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#postCategoryCollapse" aria-expanded="true" aria-controls="postCategoryCollapse">
           <i class="fas fa-sitemap fa-folder"></i>
@@ -165,7 +165,7 @@
             <a class="collapse-item" href="{{route('post-category.create')}}">Add Category</a>
           </div>
         </div>
-      </li>
+      </li> 
 
       <!-- Tags -->
     <li class="nav-item">
@@ -201,8 +201,9 @@
       <a class="nav-link" href="{{route('coupon.index')}}">
           <i class="fas fa-table"></i>
           <span>Coupon</span></a>
-    </li>
-     <!-- Users --> --}}
+    </li> 
+    
+     <!-- Users -->
      <li class="nav-item">
         <a class="nav-link" href="{{route('users.index')}}">
             <i class="fas fa-users"></i>

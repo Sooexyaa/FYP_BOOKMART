@@ -4,7 +4,7 @@
 
 @section('main-content')
 <div class="card">
-<h5 class="card-header">Order       <a href="{{route('order.pdf',$order->id)}}" class=" btn btn-sm btn-primary shadow-sm float-right"><i class="fas fa-download fa-sm text-white-50"></i> Generate PDF</a>
+{{-- <h5 class="card-header">Order       <a href="{{route('order.pdf',$order->id)}}" class=" btn btn-sm btn-primary shadow-sm float-right"><i class="fas fa-download fa-sm text-white-50"></i> </a> --}}
   </h5>
   <div class="card-body">
     @if($order)
@@ -29,8 +29,15 @@
             <td>{{$order->first_name}} {{$order->last_name}}</td>
             <td>{{$order->email}}</td>
             <td>{{$order->quantity}}</td>
-            <td>${{$order->shipping->price}}</td>
-            <td>${{number_format($order->total_amount,2)}}</td>
+            <td>
+              @if(isset($order->shipping) && $order->shipping !== null)
+                  Rs.{{$order->shipping->price}}
+              @else
+                  Shipping price not available
+              @endif
+          </td>
+          
+            <td>Rs.{{number_format($order->total_amount,2)}}</td>
             <td>
                 @if($order->status=='new')
                   <span class="badge badge-primary">{{$order->status}}</span>
@@ -79,16 +86,23 @@
                         <td> : {{$order->status}}</td>
                     </tr>
                     <tr>
-                        <td>Shipping Charge</td>
-                        <td> : $ {{$order->shipping->price}}</td>
-                    </tr>
+                      <td>Delivery Charge</td>
+                      <td> : Rs. 
+                          @if($order->shipping)
+                              {{$order->shipping->price}}
+                          @else
+                              Shipping information not available
+                          @endif
+                      </td>
+                  </tr>
+                  
                     <tr>
                       <td>Coupon</td>
-                      <td> : $ {{number_format($order->coupon,2)}}</td>
+                      <td> : Rs. {{number_format($order->coupon,2)}}</td>
                     </tr>
                     <tr>
                         <td>Total Amount</td>
-                        <td> : $ {{number_format($order->total_amount,2)}}</td>
+                        <td> : Rs. {{number_format($order->total_amount,2)}}</td>
                     </tr>
                     <tr>
                         <td>Payment Method</td>
@@ -104,7 +118,7 @@
 
           <div class="col-lg-6 col-lx-4">
             <div class="shipping-info">
-              <h4 class="text-center pb-4">SHIPPING INFORMATION</h4>
+              <h4 class="text-center pb-4">DELIVERY INFORMATION</h4>
               <table class="table">
                     <tr class="">
                         <td>Full Name</td>

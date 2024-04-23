@@ -44,7 +44,12 @@
                 <tr>
                     <td>{{$review->id}}</td>
                     <td>{{$review->user_info['name']}}</td>
+                    @if($review->product)
                     <td>{{$review->product->title}}</td>
+                @else
+                    <td>Book</td>
+                @endif
+                
                     <td>{{$review->review}}</td>
                     <td>
                      <ul style="list-style:none" class="d-flex">

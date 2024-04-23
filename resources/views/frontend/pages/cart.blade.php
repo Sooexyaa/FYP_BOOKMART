@@ -104,19 +104,19 @@
 						<div class="row">
 							<div class="col-lg-8 col-md-5 col-12">
 								<div class="left">
-									{{-- <div class="coupon">
+									<div class="coupon">
 									<form action="{{route('coupon-store')}}" method="POST">
 											@csrf
 											<input name="code" placeholder="Enter Your Coupon">
 											<button class="btn">Apply</button>
 										</form>
-									</div> --}}
-									{{-- <div class="checkbox">`
+									</div> 
+									<div class="checkbox">`
 										@php
 											$shipping=DB::table('shippings')->where('status','active')->limit(1)->get();
 										@endphp
-										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox" onchange="showMe('shipping');"> Shipping</label>
-									</div> --}}
+										<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox" onchange="showMe('shipping');"> Delivery</label>
+									</div> 
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-7 col-12">
@@ -189,7 +189,7 @@
 					<!-- Start Single Service -->
 					<div class="single-service">
 						<i class="ti-tag"></i>
-						<h4>Best Peice</h4>
+						<h4>Authentic Books</h4>
 						<p>Guaranteed price</p>
 					</div>
 					<!-- End Single Service -->

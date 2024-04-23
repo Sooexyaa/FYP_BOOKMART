@@ -41,8 +41,10 @@
             @foreach($comments as $comment)
                 <tr>
                     <td>{{$comment->id}}</td>
-                    <td>{{$comment->user_info['name']}}</td>
-                    <td>{{$comment->post->title}}</td>
+                    <td>{{ isset($comment->user_info['name']) ? $comment->user_info['name'] : 'Unknown User' }}</td>
+
+                    <td>{{ $comment->post ? $comment->post->title : 'No title available' }}</td>
+
                     <td>{{$comment->comment}}</td>
                     <td>{{$comment->created_at->format('M d D, Y g: i a')}}</td>
                     <td>

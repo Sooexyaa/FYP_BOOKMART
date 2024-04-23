@@ -358,11 +358,11 @@
 	visibility:hidden;
 	z-index:99;
 }
-.header .shopping:hover .shopping-item{
+/* .header .shopping:hover .shopping-item{
 	transform: translateY(0px);
 	opacity:1;
 	visibility:visible;
-}
+} */
 .header .shopping .dropdown-cart-header{
 	padding-bottom: 10px;
     margin-bottom: 15px;

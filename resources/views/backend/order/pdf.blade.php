@@ -129,7 +129,7 @@
               @endforeach
             </span></td>
           <td>x{{$cart->quantity}}</td>
-          <td><span>${{number_format($cart->price,2)}}</span></td>
+          <td><span>Rs.{{number_format($cart->price,2)}}</span></td>
         </tr>
       @endforeach
       </tbody>
@@ -137,7 +137,7 @@
         <tr>
           <th scope="col" class="empty"></th>
           <th scope="col" class="text-right">Subtotal:</th>
-          <th scope="col"> <span>${{number_format($order->sub_total,2)}}</span></th>
+          <th scope="col"> <span>Rs.{{number_format($order->sub_total,2)}}</span></th>
         </tr>
       {{-- @if(!empty($order->coupon))
         <tr>
@@ -146,14 +146,21 @@
           <th scope="col"><span>-{{$order->coupon->discount(Helper::orderPrice($order->id, $order->user->id))}}{{Helper::base_currency()}}</span></th>
         </tr>
       @endif --}}
-        <tr>
-          <th scope="col" class="empty"></th>
-          @php
-            $shipping_charge=DB::table('shippings')->where('id',$order->shipping_id)->pluck('price');
-          @endphp
-          <th scope="col" class="text-right ">Delivery:</th>
-          <th><span>Rs.{{number_format($shipping_charge[0],2)}}</span></th>
-        </tr>
+      <tr>
+        <th scope="col" class="empty"></th>
+        @php
+            $shipping_charge = DB::table('shippings')->where('id', $order->shipping_id)->pluck('price');
+        @endphp
+        <th scope="col" class="text-right">Delivery:</th>
+        @if (!empty($shipping_charge))
+            @if (isset($shipping_charge[0]))
+                <th><span>Rs.{{ number_format($shipping_charge[0], 2) }}</span></th>
+            @else
+                <th><span>No shipping charge</span></th>
+            @endif
+        @endif
+    </tr>
+    
         <tr>
           <th scope="col" class="empty"></th>
           <th scope="col" class="text-right">Total:</th>

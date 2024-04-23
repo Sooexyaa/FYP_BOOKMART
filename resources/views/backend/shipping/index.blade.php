@@ -9,8 +9,8 @@
          </div>
      </div>
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary float-left">Shipping List</h6>
-      <a href="{{route('shipping.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add Shipping</a>
+      <h6 class="m-0 font-weight-bold text-primary float-left">Delivery List</h6>
+      <a href="{{route('shipping.create')}}" class="btn btn-primary btn-sm float-right" data-toggle="tooltip" data-placement="bottom" title="Add User"><i class="fas fa-plus"></i> Add delivery</a>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -39,7 +39,7 @@
                 <tr>
                     <td>{{$shipping->id}}</td>
                     <td>{{$shipping->type}}</td>
-                    <td>${{$shipping->price}}</td>
+                    <td>Rs.{{$shipping->price}}</td>
                     <td>
                         @if($shipping->status=='active')
                             <span class="badge badge-success">{{$shipping->status}}</span>
