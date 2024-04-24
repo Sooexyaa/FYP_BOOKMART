@@ -102,20 +102,21 @@
 											</div> --}}
 											<!--/ End Color -->
 											<!-- Size -->
-											@if($product_detail->size)
-												<div class="size mt-4">
-													<h4>Author</h4>
-													<ul>
+											<div class="size mt-4">
+												<h4>Author</h4>
+												<div style="display: inline-block;">
+												
 														@php 
-															$sizes=explode(',',$product_detail->size);
-															// dd($sizes);
+															$sizes = explode(',', $product_detail->size);
 														@endphp
 														@foreach($sizes as $size)
-														<li><a href="#" class="one">{{$size}}</a></li>
+															<li style="display: inline-block; margin-right: 10px;"><a href="#" class="one">{{$size}}</a></li>
 														@endforeach
 													</ul>
 												</div>
-											@endif
+											</div>
+											
+										
 											<!--/ End Size -->
 											<!-- Product Buy -->
 											<div class="product-buy">
@@ -349,8 +350,8 @@
 									@php 
 										$after_discount=($data->price-(($data->discount*$data->price)/100));
 									@endphp
-									<span class="old">${{number_format($data->price,2)}}</span>
-									<span>${{number_format($after_discount,2)}}</span>
+									<span class="old">Rs.{{number_format($data->price,2)}}</span>
+									<span>Rs.{{number_format($after_discount,2)}}</span>
 								</div>
 							  
 							</div>
@@ -398,7 +399,7 @@
 			</div>
 			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 				<div class="quickview-content">
-					<h2>Flared Shift Dress</h2>
+					<h2></h2>
 					<div class="quickview-ratting-review">
 						<div class="quickview-ratting-wrap">
 							<div class="quickview-ratting">
@@ -413,31 +414,8 @@
 						<div class="quickview-stock">
 							<span><i class="fa fa-check-circle-o"></i> in stock</span>
 						</div>
-					</div>
-					<h3>$29.00</h3>
-					<div class="quickview-peragraph">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iste laborum ad impedit pariatur esse optio tempora sint ullam autem deleniti nam in quos qui nemo ipsum numquam.</p>
-					</div>
-					<div class="size">
-						<div class="row">
-							<div class="col-lg-6 col-12">
-								<h5 class="title">Size</h5>
-								<select>
-									<option selected="selected">s</option>
-									<option>m</option>
-									<option>l</option>
-									<option>xl</option>
-								</select>
-							</div>
-							<div class="col-lg-6 col-12">
-								<h5 class="title">Color</h5>
-								<select>
-									<option selected="selected">orange</option>
-									<option>purple</option>
-									<option>black</option>
-									<option>pink</option>
-								</select>
-							</div>
+					
+			
 						</div>
 					</div>
 					<div class="quantity">

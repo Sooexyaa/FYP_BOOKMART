@@ -13,10 +13,8 @@ class SettingTableSeeder extends Seeder
     public function run()
     {
         $data=array(
-            'description'=>"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspiciatis unde sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspiciatis unde omnis iste natus error sit voluptatem Excepteu
-
-                            sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspiciatis Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sed ut perspi deserunt mollit anim id est laborum. sed ut perspi.",
-            'short_des'=>"Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.",
+            'description'=>"BOOKMART is the best Bookstore for a reader. Please FOLLOW us and get updated of all kinds of COURSE BOOKS,LITERARY BOOKS as well as STATIONERIES.",
+            'short_des'=>"Here at Book Mart you can get all kinds of Academic, fiction and non- fiction books and stationaries. We also buy and sell second hand books in reasonable price",
             'photo'=>"image.jpg",
             'logo'=>'logo.jpg',
             'address'=>"Gairapatan,Pokhara",
