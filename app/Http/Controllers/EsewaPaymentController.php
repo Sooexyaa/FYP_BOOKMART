@@ -49,6 +49,7 @@ class EsewaPaymentController extends Controller
                 'sub_total' => Helper::totalCartPrice(),
                 'quantity' => Helper::cartCount(),
                 'order_number' => 'ORD-' . strtoupper(Str::random(10)),
+                'payment_status' => 'paid',
             ]);
             $esewa->init();
         }

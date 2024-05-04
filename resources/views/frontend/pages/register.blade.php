@@ -70,12 +70,33 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group login-btn">
-                                        <button class="btn" type="submit">Register</button>
-                                        <a href="{{route('login.form')}}" class="btn">Login</a>
-                                        OR
-                                        {{-- <a href="{{route('login.redirect','facebook')}}" class="btn btn-facebook"><i class="ti-facebook"></i></a>
-                                        <a href="{{route('login.redirect','github')}}" class="btn btn-github"><i class="ti-github"></i></a>
-                                        <a href="{{route('login.redirect','google')}}" class="btn btn-google"><i class="ti-google"></i></a> --}}
+                                        <style>
+                                           <style>
+    .btn-container {
+        display: flex;
+        align-items: center !important; 
+        gap: 50px !important; 
+    }
+
+  
+    .btn {
+       
+    }
+
+    .or-text {
+        margin: 0 10px; 
+    }
+</style>
+
+<div class="btn-container">
+    <button class="btn" type="submit">Register</button>
+    <span class="or-text">OR</span>
+    <a href="{{ route('login.form') }}" class="btn">Login</a>
+</div>
+
+                                        
+                                        
+                                       
                                     </div>
                                 </div>
                             </div>
